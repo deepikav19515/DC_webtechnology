@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="DocApp.css">
+    <style>
+        body{
+            background-color: burlywood;
+        }
+    </style>
+    <script>
+        function Validation(){
+            var correct_way = /^[A-Za-z\s]+$/;
+            var CVV = /^[0-9]{3,4}$/;
+            var Name=document.getElementById("name").value;
+            var Card=document.getElementById("cnumber").value;
+            var cvv=document.getElementById("cvv").value;
+            if(Name==null || Name=="") 
+            {
+                alert("Name should not be empty");
+                return false;
+            }
+            if(Name.match(correct_way)){
+                true;
+            }
+            else{
+                alert("Only Alphabets are allowed");
+                return false;
+            }
+            if(Card.length>16 || Card.length<16){
+                alert("Not a valid card number");
+                return false;
+            }
+            if(cvv.match(CVV)){
+                true;
+            }
+            else{
+                alert("Please enter appropriate cvv number");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="payment-method">
+        <h1><b>Payment Form</b></h1><hr>
+        <form action="#">
+            <h2><b>Payment Details</b></h2><hr>
+            <table>
+                <tr>
+                    <td><b>Card:</b></td><td><input type="radio" name="amount"></td>
+                </tr>
+                <tr>
+                    <td><b>Google Pay:</b></td><td><input type="radio" name="amount"></td>
+                </tr>
+                <tr>
+                    <td><b>phone Pay:</b></td><td><input type="radio" name="amount"></td>
+                </tr>
+                <tr>
+                    <td><b>Card Type:</b></td>
+                    <td>
+                        <select name="card_type" id="card_type">
+                            <option value="">--select your card--</option>
+                            <option value="visa">Visa</option>
+                            <option value="credit_card">Credit Card</option>
+                            <option value="debit_card">Debit Card</option>
+                            <option value="master_card">Master Card</option>
+                            <option value="rupay">Rupay</option>
+                        </select>
+                    </td>
+                </tr>
+                 <tr>
+                    <td><b>Name as on card:</b></td><td><input type="text" name="name" id="name" placeholder="Enter Name" required/></td>
+                </tr>
+                <tr>
+                    <td><b>Card Number:</b></td><td><input type="number" name="cnumber" id="cnumber" placeholder="1111-2222-3333-4444" required/></td>
+                </tr>
+                <tr>
+                    <td><b>Expiry Date:</b></td><td><input type="date" name="expiry_date" required/></td>
+                </tr>
+                <tr>
+                    <td><b>CVV</b></td><td><input type="number" name="cvv" id="cvv" placeholder="123" required/></td>
+                </tr>
+            </table><br><br>
+            <a href="Review.html"><button type="button" onclick="return Validation()">Pay Now</button></a>
+        </form>
+    </div>
+</body>
+</html>

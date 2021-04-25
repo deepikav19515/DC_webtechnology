@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prescription Form</title>
+    <link rel="stylesheet" href="DocApp.css">
+    <style>
+        body{
+            background-color: burlywood;
+        }
+    </style>
+    <script>
+        function Validation(){
+            var correct_way = /^[A-Za-z\s]+$/;
+            var Name=document.getElementById("name").value;
+            if(Name==null || Name=="") 
+            {
+                alert("Name should not be empty");
+                return false;
+            }
+            if(Name.match(correct_way)){
+                true;
+            }
+            else{
+                alert("Only Alphabets are allowed");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="prescription-form">
+    <h1><b>Doctor's Prescription</b></h1><hr>
+        <form action="#">
+            <table>
+                <tr>
+                    <td><b>Patient's Name:</b></td><td><input type="text" name="name" id="name"></td>
+                </tr>
+                <tr>
+                    <td><b>Patient's Age:</b></td><td><input type="Number" name="patientage"></td>
+                </tr>
+                <tr>
+                    <td><b>Blood Group:</b></td><td><input type="text" name="Bloodgroup"></td>
+                </tr>
+                <tr>
+                    <td><b>Prescription:</b></td><td><textarea name="prescription" id="" cols="50" rows="5"></textarea></td>
+                </tr>
+                <tr>
+                    <td><b>Advice:</b></td><td><textarea name="advice" id="" cols="50" rows="5"></textarea></td>
+                </tr>
+            </table>
+            <button type="button" onclick="return Validation()">Submit</button>
+        <button type="button">Cancel</button>
+        </form>
+    </div>
+</body>
+</html>

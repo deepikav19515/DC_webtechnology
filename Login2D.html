@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="DocApp.css">
+    <style>
+        body{
+            background: url('./Images/front.jpg') no-repeat;
+            background-size: cover;
+        }
+    </style>
+    <script>
+        function validateform(){
+            var name=document.getElementById("user").value;
+            var password=document.getElementById("password").value;
+            if(name==null || name==""){
+                alert("Name can't be blank");
+                return false;
+            }
+            else if(password.length<8){
+                alert("Password must be atleast 8 characters long");
+                return false;
+            }
+            else if(password.search(/[0-9]/)==-1){
+                alert("Password must contain atleast one number");
+                return false;
+            }
+            else if(password.search(/[a-z]/)==-1){
+                alert("Password must contain atleast one small letter");
+                return false;
+            }
+            else if(password.search(/[A-Z]/)==-1){
+                alert("Password must contain atleast one Capital letter");
+                return false;
+            }
+            else if(password.search(/[!\@\#\$\%\^\&\(\)\_\+\.\,\;\:]/)==-1){
+                alert("Password must contain atleast one Special letter");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="login-form">
+    <h1><b>Doctor Login Form</b></h1>
+    <form name="myform" method="POST">
+        <p><b>User Name</b></p>
+        <input type="text" name="user" id="user">
+        <p><b>Password</b></p>
+        <input type="password" name="password" id="password">
+        <a href="DoctorBoot.html"><button type="button" onclick="return validateform()">Login</button></a>
+        <a href="Register.html"><button type="button">Register</button></a>
+    </form>
+</div>
+</body>
+</html>

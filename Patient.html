@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient</title>
+    <link rel="stylesheet" href="DocApp.css">
+    <style>
+        body{
+            background-color: burlywood;
+        }
+    </style>
+    <script>
+        function Validation(){
+            var correct_way = /^[A-Za-z]+$/;
+            var Fname=document.getElementById("fname").value;
+            var Lname=document.getElementById("lname").value;
+            var Phone=document.getElementById("contact").value;
+            var Detail=document.getElementById("reason").value;
+            if(Fname==null || Fname=="") 
+            {
+                alert("First Name should not be empty");
+                return false;
+            }
+            if(Fname.match(correct_way)){
+                true;
+            }
+            else{
+                alert("Only Alphabets are allowed");
+                return false;
+            }
+            if(Lname.match(correct_way)){
+                true;
+            }
+            else{
+                alert("Only Alphabets are allowed");
+                return false;
+            }
+            if(Phone.length>10 || Phone.length<10){
+                alert("Only 10 digits are allowed");
+                return false;
+            }
+            if(Phone.charAt(0)=="0"){
+                alert("Contact number should not start with 0");
+                return false;
+            }
+            if(Detail.length>60){
+                alert("Accepted character length is only 30");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="patient-form">
+        <h1><b>Patient Details</b></h1>
+        <form action="#">
+            <table>
+                <tr>
+                    <td><b>First Name:</b></td>
+                    <td><input type="text" name="firstname" id="fname" placeholder="First name"><br></td>
+                </tr>
+                <tr>
+                    <td><b>Last Name:</b></td><td><input type="text" name="lastname" id="lname" placeholder="Last name"><br></td>
+                </tr>
+                <tr>
+                    <td><b>Age:</b></td><td><input type="number" name="age" placeholder="age"><br></td>
+                </tr>
+                <tr>
+                    <td><b>Blood Group:</b></td><td><input type="text" name="Bloodgroup" placeholder="Bloodgroup"><br></td>
+                </tr>
+                <tr>
+                    <td><b>Contact no:</b></td><td><input type="number" name="phone" id="contact" placeholder="Contact"></td>
+                </tr>
+                <tr>
+                    <td><b>Date of Birth:</b></td><td><input type="date" name="date" placeholder="DOB"></td>
+                </tr>
+                <tr>
+                    <td><b>Gender:</b></td>
+                </tr>
+                <tr>
+                    <td>Male</td><td><input type="radio" name="gender"><br></td>
+                </tr>
+                <tr>
+                    <td>Female</td><td><input type="radio" name="gender"><br></td>
+                </tr>
+                <tr>
+                    <td><b>Address:</b></td><td><textarea name="address" id="address" cols="50" rows="5"></textarea></td>
+                </tr>
+                <tr>
+                    <td><b>Pincode:</b></td><td><input type="number" name="Pincode" placeholder="Pincode"></td>
+                </tr>
+                <tr>
+                    <td><b>Appointment reason:</b></td><td><textarea name="reason" id="reason" cols="50" rows="5"></textarea></td>
+                </tr>
+            </table>
+            <button type="button" onclick="return Validation()">Submit</button>
+            <button type="button">Cancel</button>
+        </form>
+    </div>
+</body>
+</html>

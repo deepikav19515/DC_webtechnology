@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Josefin+Sans&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+/*Login started*/
+.login-form{
+    width: 350px;
+    top: 50%;
+    left: 25%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    color: rgb(40, 6, 85);
+}
+.login-form h1{
+    font-size: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 40px 0;
+    font-family: 'Allura', cursive;
+}
+.login-form p{
+    font-size: 30px;
+    margin: 15px 0;
+}
+.login-form input{
+    font-size: 20px;
+    width: 100%;
+    padding: 15px 10px;
+    border-radius: 5px;
+    outline: none;
+}
+.login-form button{
+    font-size: 18px;
+    padding: 10px 10px;
+    margin: 15px;
+    border-radius: 5px;
+    width: 40%;
+}
+/*Login Ended*/
+/*Registration Form Started*/
+.registration-form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+}
+.registration-form h1{
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10% 10%;
+    color: maroon;
+    font-family: 'Allura', cursive;
+}
+.registration-form td{
+    font-size: 20px;
+    margin: 15px 0px;
+    color: rgb(8, 1, 41);
+}
+.registration-form input{
+    font-size: 16px;
+    padding: 8px 8px;
+    width: 100%;
+    margin: 5px 30px;
+    border-radius: 5px;
+}
+.registration-form button{
+    font-size: 18px;
+    padding: 10px 10px;
+    margin: 15px;
+    border-radius: 5px;
+    width: 20%;
+    background-color: rgb(151, 114, 114);
+    outline: saddlebrown;
+    border: 0;
+}
+/*Registration Form Ended*/
+/*Patient Form Started*/
+.patient-form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 450px; 
+}
+.patient-form h1{
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 2% 2%;
+    color: maroon;
+    font-family: 'Allura', cursive;
+}
+.patient-form td{
+    font-size: 20px;
+    margin: 15px 0px;
+    color: rgb(8, 1, 41);
+}
+.patient-form input{
+    font-size: 14px;
+    padding: 8px 8px;
+    width: 100%;
+    margin: 5px 30px;
+    border-radius: 5px;
+}
+.patient-form textarea{
+    font-size: 14px;
+    padding: 8px 8px;
+    width: 100%;
+    margin: 5px 30px;
+    border-radius: 5px;
+}
+.patient-form button{
+    font-size: 18px;
+    padding: 10px 10px;
+    margin: 15px;
+    border-radius: 5px;
+    width: 20%;
+    background-color: rgb(196, 163, 163);
+    outline: saddlebrown;
+    border: 0;
+}
+/*Patient Form Ended*/
+/*Doctor details Started*/
+.doctor-form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 450px;   
+}
+.doctor-form h1{
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 5%;
+    margin: 5% 5%;
+    color: maroon;
+    font-family: 'Allura', cursive;
+}
+.doctor-form td{
+    font-size: 20px;
+    margin: 15px 0px;
+    color: rgb(8, 1, 41);
+}
+.doctor-form input{
+    font-size: 14px;
+    padding: 8px 8px;
+    width: 100%;
+    margin: 5px 30px;
+    border-radius: 5px;
+}
+.doctor-form textarea{
+    font-size: 14px;
+    padding: 8px 8px;
+    width: 100%;
+    margin: 5px 30px;
+    border-radius: 5px;
+}
+.doctor-form button{
+    font-size: 18px;
+    padding: 10px 10px;
+    margin: 15px;
+    border-radius: 5px;
+    width: 20%;
+    background-color: rgb(196, 163, 163);
+    outline: saddlebrown;
+    border: 0;
+}
+/*Doctor details Ended*/
+/*Booking Started*/
+.patient-appointment h1{
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    color: maroon;
+    margin: 1%;
+    font-family: 'Allura', cursive;
+}
+.patient-appointment h2{
+    font-size: 30px;
+    text-align: justify;
+    color: rgb(2, 61, 71);
+    margin: 1%;
+    padding: 5px 10px;
+}
+.patient-appointment td{
+    font-size: 20px;
+    margin: 15px 0px;
+    color: rgb(8, 1, 41);
+    padding: 5px 10px;
+}
+.patient-appointment input{
+    font-size: 14px;
+    padding: 8px 8px;
+    width: 100%;
+    margin: 5px 30px;
+    outline: rgb(110, 109, 109);
+    border-radius: 5px;
+}
+.patient-appointment textarea{
+    font-size: 14px;
+    padding: 8px 8px;
+    width: 100%;
+    margin: 5px 30px;
+    outline: rgb(110, 109, 109);
+    border-radius: 5px;
+}
+.patient-appointment button{
+    font-size: 18px;
+    padding: 10px 10px;
+    margin: 15px;
+    border-radius: 5px;
+    width: 10%;
+    background-color: rgb(196, 163, 163);
+    outline: saddlebrown;
+    border: 0;
+}
+/*Booking Ended*/
+/*Payment Started*/
+.payment-method h1{
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    color: maroon;
+    margin: 1%;
+    font-family: 'Allura', cursive;
+}
+.payment-method h2{
+    font-size: 30px;
+    text-align: justify;
+    color: rgb(5, 82, 95);
+    margin: 1%;
+    padding: 5px 10px;
+}
+.payment-method td{
+    font-size: 20px;
+    margin: 20px 0px;
+    color: rgb(8, 1, 41);
+    padding: 10px 10px;
+}
+.payment-method input,select{
+    font-size: 14px;
+    padding: 8px 8px;
+    width: 100%;
+    margin: 5px 30px;
+    outline: rgb(110, 109, 109);
+    border-radius: 5px;
+}
+.payment-method button{
+    font-size: 18px;
+    padding: 10px 10px;
+    margin: 15px;
+    border-radius: 5px;
+    width: 10%;
+    background-color: rgb(196, 163, 163);
+    outline: saddlebrown;
+    border: 0;
+}
+/*Payment Ended*/
+/*Review Started*/
+.review_details h1{
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    color: maroon;
+    margin: 1%;
+    font-family: 'Allura', cursive;
+}
+.review_details td{
+    font-size: 20px;
+    margin: 20px 0px;
+    color: rgb(8, 1, 41);
+    padding: 15px 10px;
+}
+.review_details input{
+    font-size: 14px;
+    padding: 8px 8px;
+    width: 100%;
+    margin: 5px 30px;
+    outline: rgb(110, 109, 109);
+    border-radius: 5px;
+}
+.review_details textarea{
+    font-size: 14px;
+    padding: 8px 8px;
+    width: 100%;
+    margin: 5px 30px;
+    outline: rgb(110, 109, 109);
+    border-radius: 5px;
+}
+.review_details button{
+    font-size: 18px;
+    padding: 10px 10px;
+    margin: 15px;
+    border-radius: 5px;
+    width: 10%;
+    background-color: rgb(196, 163, 163);
+    outline: saddlebrown;
+    border: 0;
+}
+/*Review Ended*/
+/*Home Page Started*/
+.heading_body{
+    width: 600px;
+    top: 30%;
+    left: 30%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    color: rgb(32, 5, 68);
+}
+.heading_body h1{
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(9, 4, 83);
+    margin: 1%;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.heading_body button{
+    font-size: 18px;
+    padding: 10px 10px;
+    margin: 15px;
+    border-radius: 5px;
+    width: 40%;
+    background-color: rgb(180, 178, 178);
+}
+/*Home Page Ended*/
+/*Prescription Started*/
+.prescription-form h1{
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    color: maroon;
+    margin: 1%; 
+    font-family: 'Allura', cursive;
+}
+.prescription-form td{
+    font-size: 20px;
+    margin: 20px 0px;
+    color: rgb(8, 1, 41);
+    padding: 15px 10px;
+}
+.prescription-form input{
+    font-size: 14px;
+    padding: 8px 8px;
+    width: 100%;
+    margin: 5px 30px;
+    outline: rgb(110, 109, 109);
+    border-radius: 5px;
+}
+.prescription-form textarea{
+    font-size: 14px;
+    padding: 8px 8px;
+    width: 100%;
+    margin: 5px 30px;
+    outline: rgb(110, 109, 109);
+    border-radius: 5px;
+}
+.prescription-form button{
+    font-size: 18px;
+    padding: 10px 10px;
+    margin: 15px;
+    border-radius: 5px;
+    width: 10%;
+    background-color: rgb(196, 163, 163);
+    outline: saddlebrown;
+    border: 0;
+}
+/*Prescription Ended*/
+
+
+

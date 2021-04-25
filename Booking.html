@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form</title>
+    <link rel="stylesheet" href="DocApp.css">
+    <style>
+        body{
+            background-color: burlywood;
+        }
+    </style>
+    <script>
+        function Validation(){
+            var correct_way = /^[A-Za-z\s]+$/;
+            var Fname=document.getElementById("fname").value;
+            var Lname=document.getElementById("lname").value;
+            var Phone=document.getElementById("contact").value;
+            var Detail=document.getElementById("adetails").value;
+            if(Fname==null || Fname=="") 
+            {
+                alert("First Name should not be empty");
+                return false;
+            }
+            if(Fname.match(correct_way)){
+                true;
+            }
+            else{
+                alert("Only Alphabets are allowed");
+                return false;
+            }
+            if(Lname.match(correct_way)){
+                true;
+            }
+            else{
+                alert("Only Alphabets are allowed");
+                return false;
+            }
+            if(Phone.length>10 || Phone.length<10){
+                alert("Only 10 digits are allowed");
+                return false;
+            }
+            if(Phone.charAt(0)=="0"){
+                alert("Contact number should not start with 0");
+                return false;
+            }
+            if(Detail.length>30){
+                alert("Accepted character length is only 30");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="patient-appointment">
+        <h1><b>Booking Appointment</b></h1>
+        <p style="text-align: center; color: rgb(124, 69, 2); margin-bottom: 1%;"><b>Please fill the form in order to request an Appointment.</b></p><hr>
+        <form action="#">
+            <h2><b>Contact Information</b></h2><hr><br><br>
+            <table>
+            <tr>
+                <td><b>First Name:</b></td><td><input type="text" name="fname" placeholder="First Name" id="fname" required/></td>
+            </tr>
+            <tr>
+                <td><b>Last Name:</b></td><td><input type="text" name="lname" placeholder="Last Name" id="lname"></td>
+            </tr>
+            <tr>
+                <td><b>Address:</b></td><td><textarea name="address" id="address" cols="30" rows="5"></textarea></td>
+            </tr>
+            <tr>                    
+                <td><b>Email:</b></td><td><input type="email" name="email" id="email" required></td>
+            </tr>
+            <tr>                    
+                <td><b>Contact no:</b></td><td><input type="number" name="contact" id="contact" required></td>
+            </tr>
+            </table><br><br>
+            <hr>
+            <h2><b>Appointment Information</b></h2><hr><br><br>
+            <table>
+                <tr>
+                    <td><b>Doctor Specialization:</b></td><td><input type="text" name="name" id="name" required></td>
+                </tr>
+                <tr>
+                    <td><b>Doctor Name:</b></td><td><input type="name" name="name" id="name" required></td>
+                </tr>
+                <tr>
+                    <td><b>Appointment Date:</b></td><td><input type="date" name="adate" required></td>
+                </tr>
+                <tr>
+                    <td><b>Appointment Time:</b></td><td><input type="time" name="atime" required></td>
+                </tr>
+                <tr>
+                    <td><b>Time Interval:</b></td>
+                </tr>
+                <tr>
+                    <td>Morning</td><td><input type="radio" name="Interval"></td>
+                </tr>
+                <tr>
+                    <td>Afternoon</td><td><input type="radio" name="Interval"></td>
+                </tr>
+                <tr>
+                    <td>Evening</td><td><input type="radio" name="Interval"></td>
+                </tr>
+                <tr>
+                    <td><b>Appointment Details:</b></td><td><textarea name="adetails" id="adetails" cols="50" rows="5"></textarea></td>
+                </tr>
+                <tr>
+                <td><b>Have you previously attended our facility?</b></td>
+                </tr>
+                <tr>
+                    <td>Yes</td><td><input type="radio" name="attended"></td>
+                </tr>
+                <tr>
+                    <td>No</td><td><input type="radio" name="attended"></td>
+                </tr>
+            </table><br><br>
+            <button type="button"  onclick="return Validation()">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+</body>
+</html>

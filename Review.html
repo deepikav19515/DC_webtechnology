@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Form</title>
+    <link rel="stylesheet" href="DocApp.css">
+    <style>
+        body{
+            background-color: burlywood;
+        }
+    </style>
+    <script>
+        function Validation(){
+            var correct_way = /^[A-Za-z\s]+$/;
+            var Name=document.getElementById("name").value;
+            var Phone=document.getElementById("contact").value;
+            if(Name==null || Name=="") 
+            {
+                alert("Name should not be empty");
+                return false;
+            }
+            if(Name.match(correct_way)){
+                true;
+            }
+            else{
+                alert("Only Alphabets are allowed");
+                return false;
+            }
+            if(Phone.length>10 || Phone.length<10){
+                alert("Only 10 digits are allowed");
+                return false;
+            }
+            if(Phone.charAt(0)=="0"){
+                alert("Contact number should not start with 0");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="review_details">
+        <h1><b>Drop us a feedback</b></h1>
+        <p style="text-align: center; color: rgb(54, 28, 19); margin-bottom: 2%;"><b>We would love to hear your thoughts...</b></p><hr>
+        <form action="#">
+            <table>
+                <tr>
+                    <td><b>Name:</b></td><td><input type="text" name="name" id="name"></td>
+                </tr>
+                <tr>
+                    <td><b>Contact no:</b></td><td><input type="number" name="contact" id="contact"></td>
+                </tr>
+                <tr>
+                    <td><b>Email ID:</b></td><td><input type="email" name="emailid"></td>
+                </tr>
+                <tr>
+                    <td><b>Discribe Feedback:</b></td><td><textarea name="feedback" id="feedback" cols="50" rows="6" placeholder="Message or Suggestion"></textarea></td>
+                </tr>
+            </table><br><br>
+            <button type="button" onclick="return Validation()">Submit</button>
+            <button type="button">Skip</button>
+        </form>
+    </div>
+</body>
+</html>
